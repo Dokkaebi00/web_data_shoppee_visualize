@@ -1,0 +1,14 @@
+{% extends 'visualize/layout.html' %}
+
+{% block main %}
+    <ul>
+        {% for label in labels_founded %}
+            <li>
+                <a href="{% url 'visualize:view' label %}">
+                    {{ label }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

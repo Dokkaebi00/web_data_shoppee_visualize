@@ -1,0 +1,14 @@
+{% extends 'visualize/layout.html' %}
+
+{% load static %}
+
+{% block main %}
+    <ul>
+        {% for title in list_titles %}
+            <li>{{ title }}</li>
+        {% endfor %}
+    </ul>
+    {% for image_path in list_image_paths %} 
+            <img style="width: auto; height: auto;" src="{% get_static_prefix %}images/{{image_path}}">
+    {% endfor %}
+{% endblock %}
